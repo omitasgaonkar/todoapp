@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do Application</h1>
+
+        <!-- Add Task Form -->
+        <div>
+            <h2>Add Task</h2>
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Task Name" required>
+                <input type="text" id="taskDescription" placeholder="Task Description" required>
+                <input type="date" id="taskDueDate" required>
+                <label for="completed">Completed:</label>
+                <input type="checkbox" id="taskCompleted">
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Edit Task Form (Hidden by Default) -->
+        <div id="editTaskContainer" style="display: none;">
+            <h2>Edit Task</h2>
+            <form id="editTaskForm">
+                <input type="text" id="editTaskName" placeholder="Task Name" required>
+                <input type="text" id="editTaskDescription" placeholder="Task Description" required>
+                <input type="date" id="editTaskDueDate" required>
+                <label for="editCompleted">Completed:</label>
+                <input type="checkbox" id="editTaskCompleted">
+                <button type="submit">Update Task</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Task List -->
+        <h2>Task List</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
